@@ -6,7 +6,7 @@
     const { params } = useRoute()
     const { getShipDetails } = useShipStore()
 
-    let ship: Ref<{} | null> = ref({})
+    let ship: Ref<{} | null> = ref(null)
 
     onMounted(async () => {
         ship.value = await getShipDetails(params.id)
